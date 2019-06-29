@@ -1,0 +1,14 @@
+<table  class="table">
+  <tr>
+    <th>Birthdate</th>
+    <th>Identification</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+  </tr>
+  <tr *ngFor="let item of resultado; let i = index">
+    <td>{{item.birthdate}}</td>
+    <td>{{item.identification}}</td>
+    <td>{{item.firstname}}</td>
+    <td>{{item.lastname}}</td>
+  </tr>
+</table>
