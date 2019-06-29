@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ObtenerClientesComponent } from './obtener-clientes/obtener-clientes.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormularioRegistroComponent } from './formulario-registro/formulario-registro.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormularioRegistroComponent } from './formulario-registro/formulario-re
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

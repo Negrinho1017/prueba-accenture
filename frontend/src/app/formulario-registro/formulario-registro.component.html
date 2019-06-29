@@ -1,27 +1,22 @@
 <div class="container">
-  <h2>Stacked form</h2>
+  <h2>Please, enter your personal information</h2>
   <form action="/action_page.php">
     <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      <label for="field">Identification:</label>
+      <input type="number" class="form-control" id="field" placeholder="Identification" name="identification" [(ngModel)]="newPerson.identification">
     </div>
     <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      <label for="field">Birthdate:</label>
+      <input type="date" class="form-control" id="field" placeholder="Birthdate" name="birthdate" [(ngModel)]="newPerson.birthdate">
     </div>
     <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      <label for="field">Firstname:</label>
+      <input type="text" class="form-control" id="field" placeholder="Firstname" name="firstname" [(ngModel)]="newPerson.firstname">
     </div>
     <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      <label for="field">Lastname:</label>
+      <input type="text" class="form-control" id="field" placeholder="Lastname" name="lastname" [(ngModel)]="newPerson.lastname">
     </div>
-    <div class="form-group form-check">
-      <label class="form-check-label">
-        <input class="form-check-input" type="checkbox" name="remember"> Remember me
-      </label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" (click)="validarDatos()" class="btn btn-primary">Join us</button>
   </form>
 </div>
