@@ -14,7 +14,7 @@ export class ObtenerClientesComponent implements OnInit {
   constructor(private service: ObtenerClientesService) { }
 
   ngOnInit() {
-    this.service.obtenerPuntuacionEscalarClaves().subscribe(res => {
+    this.service.obtenerClientes().subscribe(res => {
       this.clientes = res;
       this.resultado = Object.keys(this.clientes).map(e => this.clientes[e]);
       this.mensaje("Excelente!", "Datos encontrados", 1);

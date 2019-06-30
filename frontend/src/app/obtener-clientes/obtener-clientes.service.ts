@@ -8,10 +8,9 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ObtenerClientesService {
-
   constructor( private http: HttpClient ) { }
 
-  public obtenerPuntuacionEscalarClaves(): Observable<any>{
+  public obtenerClientes(): Observable<any>{
     return this.http.get("https://testbankapi.firebaseio.com/clients.json", httpOptions);
   }
 }
