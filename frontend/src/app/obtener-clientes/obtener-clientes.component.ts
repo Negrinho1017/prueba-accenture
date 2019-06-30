@@ -17,9 +17,9 @@ export class ObtenerClientesComponent implements OnInit {
     this.service.obtenerClientes().subscribe(res => {
       this.clientes = res;
       this.resultado = Object.keys(this.clientes).map(e => this.clientes[e]);
-      this.mensaje("Excelente!", "Datos encontrados", 1);
+      this.mensaje("Excellent!", "Data found", 1);
     }, error => {
-      this.mensaje("Error!", "Datos no encontrados", 2);
+      this.mensaje("Error!", "Data not found", 2);
     });
   }
 

@@ -11,6 +11,6 @@ export class ObtenerClientesService {
   constructor( private http: HttpClient ) { }
 
   public obtenerClientes(): Observable<any>{
-    return this.http.get("https://testbankapi.firebaseio.com/clients.json", httpOptions);
+    return this.http.get("https://prueba-ebb92.firebaseio.com/clients.json", httpOptions);
   }
 }

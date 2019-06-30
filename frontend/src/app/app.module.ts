@@ -6,6 +6,9 @@ import { ObtenerClientesComponent } from './obtener-clientes/obtener-clientes.co
 import { HttpClientModule } from '@angular/common/http';
 import { FormularioRegistroComponent } from './formulario-registro/formulario-registro.component';
 import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,9 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

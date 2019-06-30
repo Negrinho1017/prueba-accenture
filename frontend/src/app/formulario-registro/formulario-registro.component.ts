@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Persona } from '../modelo/Persona';
 import Swal from 'sweetalert2';
 import { ObtenerClientesService } from '../obtener-clientes/obtener-clientes.service';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 @Component({
   selector: 'app-formulario-registro',
@@ -12,8 +13,7 @@ export class FormularioRegistroComponent implements OnInit {
   newPerson: Persona;
   clientes: any;
   resultado: Persona[];
-
-  constructor( private service: ObtenerClientesService ) { }
+  constructor( private service: ObtenerClientesService, private db :AngularFireDatabase ) { }
 
   ngOnInit() {
     this.newPerson = new Persona();
@@ -33,6 +33,10 @@ export class FormularioRegistroComponent implements OnInit {
     }
   }
 
+  ingresarUsuario() {
+    this.db.list('/clients').push(this.newPerson);
+   }
+
   validaciones(){
     this.service.obtenerClientes().subscribe(res => {
       this.clientes = res;
@@ -42,7 +46,8 @@ export class FormularioRegistroComponent implements OnInit {
       }else if(!this.esMayorDeEdad()){
         this.mensaje("Error!","You are not of legal age",2);
       }else{
-        this.mensaje("Excelente!","You are registered",1);
+        this.ingresarUsuario();
+        this.mensaje("Excellent!","You are registered",1);
       }
     })
 
