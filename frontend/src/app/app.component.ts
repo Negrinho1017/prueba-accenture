@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'frontend';
   selectedColor: String = "#F8F8FF";
+  hoverClients: boolean;
+  hoverForm: boolean;
 
   changeSelectedColor(selectedColor:String){
     this.selectedColor = selectedColor;
