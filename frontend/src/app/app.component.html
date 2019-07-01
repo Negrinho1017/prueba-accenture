@@ -9,24 +9,24 @@
     Choose your favorite color:
   </h4>
   <input type="button" id="btnPrueba" value="" style="background-color: #FE5D26" class="btn-lg"
-    (click)="selectedColor=1">
+    (click)="selectedColor='1'">
   <input type="button" id="btnPrueba" value="" style="background-color: #F2C078" class="btn-lg"
-    (click)="selectedColor=2">
+    (click)="selectedColor='2'">
   <input type="button" id="btnPrueba" value="" style="background-color: #FAEDCA" class="btn-lg"
-    (click)="selectedColor=3">
+    (click)="selectedColor='3'">
   <input type="button" id="btnPrueba" value="" style="background-color: #7EBC89" class="btn-lg"
-    (click)="selectedColor=4">
+    (click)="selectedColor='4'">
   <input type="button" id="btnPrueba" value="" style="background-color: #C1DBB3" class="btn-lg"
-    (click)="selectedColor=5">
+    (click)="selectedColor='5'">
 </div>
 
 
 
-<div [ngStyle]="{'background-color':selectedColor == 1 ? '#FE5D26' : 
-selectedColor == 2 ? '#F2C078' : 
-selectedColor == 3 ? '#FAEDCA' :
-selectedColor == 4 ? '#7EBC89' :
-selectedColor == 5 ? '#C1DBB3' : 'white'}">
+<div [ngStyle]="{'background-color':selectedColor == '1' ? '#FE5D26' : 
+selectedColor == '2' ? '#F2C078' : 
+selectedColor == '3' ? '#FAEDCA' :
+selectedColor == '4' ? '#7EBC89' :
+selectedColor == '5'? '#C1DBB3' : 'white'}">
 
   <router-outlet></router-outlet>
 </div>
