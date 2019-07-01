@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend';
-  selectedColor: String = "1";
+  selectedColor: String = "#F8F8FF";
+
+  changeSelectedColor(selectedColor:String){
+    this.selectedColor = selectedColor;
+    localStorage.setItem('selectedColor',<string> this.selectedColor);
+  }
 }

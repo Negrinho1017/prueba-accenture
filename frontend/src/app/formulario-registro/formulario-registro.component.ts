@@ -13,10 +13,12 @@ export class FormularioRegistroComponent implements OnInit {
   newPerson: Persona;
   clientes: any;
   resultado: Persona[];
+  selectedColor: string;
   constructor(private service: ObtenerClientesService, private db: AngularFireDatabase) { }
 
   ngOnInit() {
     this.newPerson = new Persona();
+    this.selectedColor = localStorage.getItem('selectedColor');
   }
 
   validarDatos() {
